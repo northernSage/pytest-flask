@@ -9,6 +9,9 @@ import pytest
 
 from ._internal import deprecated
 
+# for macOS
+multiprocessing.set_start_method("fork")
+
 
 class LiveServer:
     """The helper class used to manage a live server. Handles creation and
