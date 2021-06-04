@@ -10,20 +10,20 @@ jobs:
         python: ["3.5", "3.6", "3.7", "3.8", "3.9"]
         os: [ubuntu-latest, macos-latest]
         include:
-          - tox_env: "py35"
-            python: "3.5"
-          - tox_env: "py36"
-            python: "3.6"
-          - tox_env: "py37"
-            python: "3.7"
-          - tox_env: "py38"
-            python: "3.8"
-          - tox_env: "py39"
-            python: "3.9"
-          - tox_env: "pre"
-            python: "3.8"
-          - tox_env: "linting"
-            python: "3.8"
+          - python: "3.5"
+            tox_env: "py35"
+          - python: "3.6"
+            tox_env: "py36"
+          - python: "3.7"
+            tox_env: "py37"
+          - python: "3.8"
+            tox_env: "py38"
+          - python: "3.9"
+            tox_env: "py39"
+          - python: "3.8"
+            tox_env: "pre"
+          - python: "3.8"
+            tox_env: "linting"
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
